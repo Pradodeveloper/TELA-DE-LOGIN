@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Moderno</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <div id="particles-js"></div>
+
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()">🌞 / 🌙</button>
+  </div>
+
+  <div class="container">
+    <div class="form-box">
+      <h2 id="form-title">Login</h2>
+
+      <form id="login-form" class="form active">
+        <input type="text" placeholder="Usuário" required />
+        <input type="password" placeholder="Senha" required />
+        <label class="checkbox"><input type="checkbox"> Manter-me conectado</label>
+        <a href="#" class="link" onclick="showForm('forgot')">Esqueceu a senha?</a>
+        <button type="submit">Entrar</button>
+        <p>Não tem conta? <a href="#" onclick="showForm('register')">Registrar</a></p>
+      </form>
+
+      <form id="register-form" class="form">
+        <input type="text" placeholder="Nome completo" required />
+        <input type="email" placeholder="E-mail" required />
+        <input type="text" placeholder="Usuário" required />
+        <input type="password" placeholder="Senha" required />
+        <input type="password" placeholder="Confirmar senha" required />
+        <button type="submit">Criar Conta</button>
+        <p>Já tem conta? <a href="#" onclick="showForm('login')">Login</a></p>
+      </form>
+
+      <form id="forgot-form" class="form">
+        <input type="email" placeholder="Digite seu e-mail" required />
+        <button type="submit">Recuperar Senha</button>
+        <p>Lembrou? <a href="#" onclick="showForm('login')">Voltar ao login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
